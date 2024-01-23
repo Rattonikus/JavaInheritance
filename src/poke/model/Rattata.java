@@ -6,5 +6,11 @@ public class Rattata extends Pokemon
 	{
 		super(19, "Rattata");
 	}
+	
+	//Overloaded constructor; Lets us name individual pokemon
+	public Rattata(String name)
+	{
+		super(19, name);
+	}
 
 }

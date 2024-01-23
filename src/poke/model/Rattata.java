@@ -12,5 +12,11 @@ public class Rattata extends Pokemon
 	{
 		super(19, name);
 	}
+	
+	//Another overloaded constructor; This time it supports evolution of pokemon
+	public Rattata(String name, int pokedex)
+	{
+		super(pokedex, name);
+	}
 
 }

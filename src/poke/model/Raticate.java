@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Zigzagoon 
+public class Raticate 
 {
 
 }

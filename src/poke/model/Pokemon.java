@@ -11,7 +11,6 @@ public abstract class Pokemon implements Serializable
 	private String name;
 
 	
-	//This is the constructor. 
 	public Pokemon(int pokedexNumber, String name)
 	{	
 		this.pokedexNumber = pokedexNumber;

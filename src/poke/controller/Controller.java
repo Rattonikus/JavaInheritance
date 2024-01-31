@@ -1,28 +1,31 @@
 package poke.controller;
+
 import poke.model.*;
 import java.util.ArrayList;
+import poke.view.PokeFrame;
 
 public class Controller 
 {
 	
 	String dataFile;
-	
-	
 	//Declare an arrayLIST, not an array, not like int[]
 	ArrayList<Pokemon> pokedex;
+	private PokeFrame window; 
 	
 	public Controller()
 	{
 		//initialize that ho 
-		ArrayList<String> pokedex = new ArrayList<String>();
-		String dataFile = "";
+		this.pokedex = new ArrayList<Pokemon>();
+		this.dataFile = "";
+		
 	}
 	
 	
 	public void start()
 	{
 		createPokedex();
-		
+		this.window = new PokeFrame(this);
+			
 	}
 	
 	

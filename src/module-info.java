@@ -4,5 +4,7 @@
 /**
  * 
  */
-module JavaInheritance {
+module JavaInheritance 
+{
+	requires java.desktop;
 }

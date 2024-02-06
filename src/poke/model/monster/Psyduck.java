@@ -11,7 +11,7 @@ public class Psyduck extends Pokemon implements Water
 	public Psyduck()
 	{
 		super(54, "Psyduck");
-		setup(true, 50, "Psyduck");
+		//setup(true, 50, "Psyduck");
 	}
 	
 	public Psyduck(String name)

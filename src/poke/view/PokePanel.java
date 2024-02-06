@@ -7,6 +7,9 @@ import java.awt.color.*;
 import java.awt.GridLayout;
 import poke.controller.Controller;
 import poke.model.Pokemon;
+import poke.controller.*;
+import java.util.ArrayList;
+
 
 public class PokePanel extends JPanel
 {
@@ -32,6 +35,8 @@ public class PokePanel extends JPanel
 	private JLabel imageLabel;
 	private ImageIcon icon;
 	private JComboBox<String> pokedexSelector;
+	
+ 
 
 	
 	
@@ -139,11 +144,7 @@ public class PokePanel extends JPanel
 		repaint();
 	}
 	
-	public void updateCurrentPokemon(String name, int index, int health, boolean canEvolve)
-	{
-		Pokemon current = pokemonList.get(index);
-		
-	}
+
 	
 
 }

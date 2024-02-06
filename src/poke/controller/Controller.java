@@ -24,6 +24,7 @@ public class Controller
 	{
 		//initialize that ho 
 		this.pokedex = new ArrayList<Pokemon>();
+		createPokedex();
 		this.dataFile = "";
 		
 	}
@@ -39,18 +40,23 @@ public class Controller
 	
 	private void createPokedex()
 	{
-		//10 Pokemon, using 3 constructor types. 
-		
-		pokedex.add(new Rattata());
-		pokedex.add(new Noibat("James"));
+		pokedex.add(new Noibat());
 		pokedex.add(new Psyduck());
-		pokedex.add(new Rattata("Rattie", 20));
+		pokedex.add(new Raticate());
+		pokedex.add(new Rattata());
 		pokedex.add(new Spheal());
 		pokedex.add(new Sprigatito());
-		pokedex.add(new Sprigatito("Whisker"));
-		pokedex.add(new Spheal("Orb"));
-		pokedex.add(new Psyduck("Quackens"));
-		pokedex.add(new Raticate("bigger rat"));
+		pokedex.add(new Rattata("The rat the makes all of the rules"));
+		pokedex.add(new Noibat("Screamer"));
+		pokedex.add(new Sprigatito("grass cat"));
+		pokedex.add(new Spheal("orb"));
+		
+	}
+	
+	public void updateCurrentPokemon(String name, int index, int health, boolean canEvolve)
+	{
+		Pokemon currentPokemon = pokedex.get(index);
+		currentPokemon.setName(name);
 		
 	}
 }

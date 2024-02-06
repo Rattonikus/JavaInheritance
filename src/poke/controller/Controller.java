@@ -7,6 +7,7 @@ import poke.model.monster.Raticate;
 import poke.model.monster.Rattata;
 import poke.model.monster.Spheal;
 import poke.model.monster.Spirigatito;
+import poke.model.types.*;
 
 import java.util.ArrayList;
 import poke.view.PokeFrame;

@@ -1,6 +1,6 @@
 package poke.model.monster;
 
-public class Raticate extends Rattata
+public class Raticate extends Rattata 
 {
 	public Raticate()
 	{

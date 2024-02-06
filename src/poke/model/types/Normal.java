@@ -1,5 +1,14 @@
 package poke.model.types;
 
-public class Normal {
+public interface Normal 
+{
+	public abstract Boolean isEffective();
+	
+	
+	public abstract int howEffective();
+	
+	
+	public abstract String getMoves();
+	
 
 }

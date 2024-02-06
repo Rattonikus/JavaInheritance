@@ -1,8 +1,9 @@
 package poke.model.monster;
 
 import poke.model.Pokemon;
+import poke.model.types.*;
 
-public class Rattata extends Pokemon
+public class Rattata extends Pokemon implements Normal
 {
 	public Rattata()
 	{
@@ -19,6 +20,23 @@ public class Rattata extends Pokemon
 	public Rattata(String name, int pokedex)
 	{
 		super(pokedex, name);
+	}
+
+	
+	public Boolean isEffective() 
+	{
+		return null;
+	}
+
+	
+	public int howEffective() 
+	{
+		return 0;
+	}
+
+	public String getMoves() 
+	{
+		return null;
 	}
 
 }

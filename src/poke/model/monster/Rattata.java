@@ -1,10 +1,15 @@
 package poke.model.monster;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import poke.model.Pokemon;
 import poke.model.types.*;
 
 public class Rattata extends Pokemon implements Normal
 {
+	private static final long serialVersionUID = 1L;
+
 	public Rattata()
 	{
 		super(19, "Rattata");
@@ -23,20 +28,45 @@ public class Rattata extends Pokemon implements Normal
 	}
 
 	
-	public Boolean isEffective() 
+	public Boolean isWeak(Pokemon opponent) 
 	{
-		return null;
+		if (opponent instanceof Normal ||
+			opponent instanceof Flying ||
+			opponent instanceof Water)
+		{
+			return true; 
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	
-	public int howEffective() 
+	public double howWeak(Pokemon opponent) 
 	{
+		if (opponent instanceof Normal ||
+				opponent instanceof Flying ||
+				opponent instanceof Water)
+			{
+			return 1.0;
+			
+			}
 		return 0;
 	}
 
-	public String getMoves() 
+	public List<String> getMoves() 
 	{
-		return null;
+		List<String> rattataMoves = new ArrayList<>();
+		
+		rattataMoves.addAll(List.of(
+				"Tackle", "Tail whip", "Quick attack",
+				"Focus Energy", "Bite", "Laser Focus", 
+				"Take Down", "Assurance", "Crunch",
+				"Sucker punch", "Super Fang", "Double Edge", "Endedavor"
+				));
+		
+		return rattataMoves; 
 	}
 
 }

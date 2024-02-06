@@ -1,5 +1,7 @@
 package poke.model.monster;
 
+import java.util.List;
+
 import poke.model.Pokemon;
 import poke.model.types.Water;
 
@@ -21,19 +23,19 @@ public class Spheal extends Pokemon implements Water
 	}
 
 	
-	public Boolean isEffective() 
+	public Boolean isEffective(Pokemon opponent) 
 	{
 		return null;
 	}
 
 	
-	public int howEffective()
+	public double howEffective(Pokemon opponent)
 	{
 		return 0;
 	}
 
 	
-	public String getMoves()
+	public List<String> getMoves()
 	{
 		return null;
 	}

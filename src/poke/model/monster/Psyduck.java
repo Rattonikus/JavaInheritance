@@ -1,5 +1,8 @@
 package poke.model.monster;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import poke.model.Pokemon;
 import poke.model.types.Water;
 
@@ -21,21 +24,46 @@ public class Psyduck extends Pokemon implements Water
 	}
 
 	
-	public Boolean isEffective() 
+	public Boolean isEffective(Pokemon opponent) 
 	{
-		return null;
+		if (opponent instanceof Water)
+		{
+			return true;
+		}
+		else
+		{
+			return false; 
+		}
+
+		
 	}
 
 	
-	public int howEffective()
+	public double howEffective(Pokemon opponent)
 	{
-		return 0;
+		if (opponent instanceof Water)
+		{
+			return 0.5;
+		}
+		else
+		{
+			return 0.0;
+		}
 	}
 
 	
-	public String getMoves()
+	public List<String> getMoves()
 	{
-		return null;
+		List<String> psyduckMoves = new ArrayList<>();
+		
+		psyduckMoves.addAll(List.of(
+				"Scratch", "Tail Whip", "Water Gun",
+				"Confusion", "Fury Swipes", "Water Pulse",
+				"Disable", "Zen Headbutt", "Screetch",
+				"Aqua Tail", "Soak", "Psych Up", "Amnesia", "Wonder Room"
+				));
+		
+		return psyduckMoves;
 	}
 
 }

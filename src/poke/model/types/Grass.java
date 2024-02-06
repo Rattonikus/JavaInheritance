@@ -1,14 +1,17 @@
 package poke.model.types;
 
+import java.util.List;
+
+import poke.model.Pokemon;
+
 public interface Grass
 {
-	public abstract Boolean isEffective();
+	public abstract Boolean isEffective(Pokemon opponent);
 	
 	
-	public abstract int howEffective();
+	public abstract double howEffective(Pokemon opponent);
 	
 	
-	public abstract String getMoves();
-	
+	public abstract List<String> getMoves();
 
 }

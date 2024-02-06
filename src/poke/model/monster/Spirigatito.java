@@ -1,7 +1,10 @@
 package poke.model.monster;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import poke.model.Pokemon;
-import poke.model.types.Grass;
+import poke.model.types.*;
 
 public class Spirigatito extends Pokemon implements Grass
 {
@@ -21,21 +24,44 @@ public class Spirigatito extends Pokemon implements Grass
 	}
 
 	
-	public Boolean isEffective()
+	public Boolean isEffective(Pokemon opponent)
 	{
-		return null;
+		if (opponent instanceof Water || opponent instanceof Grass)
+		{
+			return true;
+		}
+		else
+		{
+			return false; 
+		}
 	}
 
 	
-	public int howEffective()
+	public double howEffective(Pokemon opponent)
 	{
-		return 0;
+		if (opponent instanceof Water || opponent instanceof Grass)
+		{
+			return 0.5;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 
 	
-	public String getMoves()
+	public List<String> getMoves()
 	{
-		return null;
+		List<String> sprigatitoMoves = new ArrayList<>();
+		
+		sprigatitoMoves.addAll(List.of(
+				"Scratch", "Tail Whip", "Leafage",
+				"Bite", "Hone Claws", "Magical Leaf",
+				"Quick Attack", "Seed Bomb", "U-Turn",
+				"Worry Seed", "Slash", "Energy Ball", "Play Rough"
+				));
+		
+		return sprigatitoMoves;
 	}
 
 }

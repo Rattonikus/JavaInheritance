@@ -1,5 +1,6 @@
 package poke.model.monster;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import poke.model.Pokemon;
@@ -25,19 +26,44 @@ public class Spheal extends Pokemon implements Water
 	
 	public Boolean isEffective(Pokemon opponent) 
 	{
-		return null;
+		if (opponent instanceof Water)
+		{
+			return true; 
+		}
+		else
+		{
+			return false; 
+		}
 	}
 
 	
 	public double howEffective(Pokemon opponent)
 	{
-		return 0;
+		if (opponent instanceof Water)
+		{
+			return 0.5;
+		}
+		else
+		{
+			return 0;
+		}
 	}
 
 	
 	public List<String> getMoves()
 	{
-		return null;
+		List<String> sphealMoves = new ArrayList<>();
+		
+		sphealMoves.addAll(List.of(
+				"Rollout", "Defense Curl", "Growl",
+				"Water Gun", "Powder Snow", "Rest",
+				"Snore", "Brine", "Aurora Beam",
+				"Encore", "Body Slam", "Surf",
+				"Blizzard", "Hail", "Sheer Cold"
+				));
+		
+		return sphealMoves;
+		
 	}
 
 }

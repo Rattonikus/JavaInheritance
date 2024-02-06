@@ -11,6 +11,7 @@ public class Psyduck extends Pokemon implements Water
 	public Psyduck()
 	{
 		super(54, "Psyduck");
+		setup(true, 50, "Psyduck");
 	}
 	
 	public Psyduck(String name)
@@ -64,6 +65,13 @@ public class Psyduck extends Pokemon implements Water
 				));
 		
 		return psyduckMoves;
+	}
+	
+	private void setup(boolean canEvolve, int health, String Name)
+	{
+		this.setCanEvolve(canEvolve);
+		this.setHealth(health);
+		this.setName(Name);
 	}
 
 }

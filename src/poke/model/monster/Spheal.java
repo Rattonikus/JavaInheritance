@@ -11,6 +11,7 @@ public class Spheal extends Pokemon implements Water
 	public Spheal()
 	{
 		super(363, "Spheal");
+		setup(true, 70, "Spheal");
 	}
 	
 	public Spheal(String name)
@@ -62,8 +63,14 @@ public class Spheal extends Pokemon implements Water
 				"Blizzard", "Hail", "Sheer Cold"
 				));
 		
-		return sphealMoves;
-		
+		return sphealMoves;	
+	}
+	
+	private void setup(boolean canEvolve, int health, String Name)
+	{
+		this.setCanEvolve(canEvolve);
+		this.setHealth(health);
+		this.setName(Name);
 	}
 
 }

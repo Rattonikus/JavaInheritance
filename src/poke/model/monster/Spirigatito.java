@@ -11,6 +11,7 @@ public class Spirigatito extends Pokemon implements Grass
 	public Spirigatito()
 	{
 		super(906, "Spirigatito");
+		setup(true, 40, "Sprigatito");
 	}
 	
 	public Spirigatito(String name)
@@ -64,4 +65,10 @@ public class Spirigatito extends Pokemon implements Grass
 		return sprigatitoMoves;
 	}
 
+	private void setup(boolean canEvolve, int health, String Name)
+	{
+		this.setCanEvolve(canEvolve);
+		this.setHealth(health);
+		this.setName(Name);
+	}
 }

@@ -13,6 +13,7 @@ public class Rattata extends Pokemon implements Normal
 	public Rattata()
 	{
 		super(19, "Rattata");
+		setup(true, 30, "Rattata");
 	}
 	
 	//Overloaded constructor; Lets us name individual pokemon
@@ -67,6 +68,13 @@ public class Rattata extends Pokemon implements Normal
 				));
 		
 		return rattataMoves; 
+	}
+	
+	private void setup(boolean canEvolve, int health, String Name)
+	{
+		this.setCanEvolve(canEvolve);
+		this.setHealth(health);
+		this.setName(Name);
 	}
 
 }

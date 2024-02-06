@@ -8,6 +8,7 @@ import poke.model.monster.Rattata;
 import poke.model.monster.Spheal;
 import poke.model.monster.Sprigatito;
 import poke.model.types.*;
+import javax.swing.JOptionPane;
 
 import java.util.ArrayList;
 import poke.view.PokeFrame;
@@ -57,6 +58,27 @@ public class Controller
 	{
 		Pokemon currentPokemon = pokedex.get(index);
 		currentPokemon.setName(name);
+		currentPokemon.setHealth(health);
+		currentPokemon.setCanEvolve(canEvolve);		
+	}
+	
+	public boolean validateNumber(String val)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Integer.parseInt(val);
+			isValid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(window, "Use a valid number");
+		}
+		
+		return isValid; 
 		
 	}
+	
+	
 }

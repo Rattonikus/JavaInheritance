@@ -1,6 +1,9 @@
 package poke.model.monster;
 
-public class Raticate extends Rattata 
+import poke.model.Pokemon;
+import poke.model.types.Normal;
+
+public class Raticate extends Rattata implements Normal
 {
 	public Raticate()
 	{

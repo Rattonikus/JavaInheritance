@@ -1,8 +1,9 @@
 package poke.model.monster;
 
 import poke.model.Pokemon;
+import poke.model.types.Water;
 
-public class Spheal extends Pokemon
+public class Spheal extends Pokemon implements Water
 {
 	public Spheal()
 	{
@@ -17,6 +18,24 @@ public class Spheal extends Pokemon
 	public Spheal(String name, int pokedex)
 	{
 		super(pokedex, name);
+	}
+
+	
+	public Boolean isEffective() 
+	{
+		return null;
+	}
+
+	
+	public int howEffective()
+	{
+		return 0;
+	}
+
+	
+	public String getMoves()
+	{
+		return null;
 	}
 
 }

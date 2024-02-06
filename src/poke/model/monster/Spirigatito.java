@@ -2,7 +2,7 @@ package poke.model.monster;
 
 import poke.model.Pokemon;
 
-public class Spirigatito extends Pokemon
+public class Spirigatito extends Pokemon implements Grass
 {
 	public Spirigatito()
 	{

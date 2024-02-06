@@ -6,20 +6,20 @@ import java.util.List;
 import poke.model.Pokemon;
 import poke.model.types.*;
 
-public class Spirigatito extends Pokemon implements Grass
+public class Sprigatito extends Pokemon implements Grass
 {
-	public Spirigatito()
+	public Sprigatito()
 	{
 		super(906, "Spirigatito");
 		setup(true, 40, "Sprigatito");
 	}
 	
-	public Spirigatito(String name)
+	public Sprigatito(String name)
 	{
 		super(906, name);
 	}
 	
-	public Spirigatito(String name, int pokedex)
+	public Sprigatito(String name, int pokedex)
 	{
 		super(pokedex, name);
 	}

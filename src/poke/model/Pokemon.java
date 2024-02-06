@@ -2,6 +2,8 @@ package poke.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+import poke.model.monster.*;
 
 public abstract class Pokemon implements Serializable
 {
@@ -9,6 +11,7 @@ public abstract class Pokemon implements Serializable
 	private int health;
 	private boolean canEvolve;
 	private String name;
+	private ArrayList pokedex; 
 
 	
 	public Pokemon(int pokedexNumber, String name)
@@ -17,6 +20,7 @@ public abstract class Pokemon implements Serializable
 		this.name = name;
 		this.canEvolve = false;
 		this.health = 100;
+		this.pokedex = new ArrayList<>();
 	}
 
 	public String[] getTypes()
@@ -78,6 +82,17 @@ public abstract class Pokemon implements Serializable
 	public void setName(String name)
 	{
 		this.name = name;
+	}
+	
+	private void createPokedex()
+	{
+		pokedex.add(new Noibat());
+		pokedex.add(new Psyduck());
+		pokedex.add(new Raticate());
+		pokedex.add(new Rattata());
+		pokedex.add(new Spheal());
+		pokedex.add(new Sprigatito());
+		
 	}
 	
 	public int getPokedex()

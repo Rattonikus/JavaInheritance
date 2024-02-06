@@ -6,7 +6,7 @@ import poke.model.monster.Psyduck;
 import poke.model.monster.Raticate;
 import poke.model.monster.Rattata;
 import poke.model.monster.Spheal;
-import poke.model.monster.Spirigatito;
+import poke.model.monster.Sprigatito;
 import poke.model.types.*;
 
 import java.util.ArrayList;
@@ -46,8 +46,8 @@ public class Controller
 		pokedex.add(new Psyduck());
 		pokedex.add(new Rattata("Rattie", 20));
 		pokedex.add(new Spheal());
-		pokedex.add(new Spirigatito());
-		pokedex.add(new Spirigatito("Whisker"));
+		pokedex.add(new Sprigatito());
+		pokedex.add(new Sprigatito("Whisker"));
 		pokedex.add(new Spheal("Orb"));
 		pokedex.add(new Psyduck("Quackens"));
 		pokedex.add(new Raticate("bigger rat"));

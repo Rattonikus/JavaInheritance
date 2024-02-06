@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.color.*;
 import java.awt.GridLayout;
 import poke.controller.Controller;
+import poke.model.Pokemon;
 
 public class PokePanel extends JPanel
 {
@@ -23,7 +24,6 @@ public class PokePanel extends JPanel
 	private JLabel numberLabel;
 
 
-	
 	private JCheckBox evolveBox;
 	private JTextArea typeArea;
 	private JScrollPane typesPane;
@@ -138,5 +138,12 @@ public class PokePanel extends JPanel
 		imageLabel.setIcon(icon);
 		repaint();
 	}
+	
+	public void updateCurrentPokemon(String name, int index, int health, boolean canEvolve)
+	{
+		Pokemon current = pokemonList.get(index);
+		
+	}
+	
 
 }

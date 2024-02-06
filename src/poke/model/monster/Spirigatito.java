@@ -1,4 +1,6 @@
-package poke.model;
+package poke.model.monster;
+
+import poke.model.Pokemon;
 
 public class Spirigatito extends Pokemon
 {

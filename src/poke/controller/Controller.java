@@ -1,6 +1,13 @@
 package poke.controller;
 
 import poke.model.*;
+import poke.model.monster.Noibat;
+import poke.model.monster.Psyduck;
+import poke.model.monster.Raticate;
+import poke.model.monster.Rattata;
+import poke.model.monster.Spheal;
+import poke.model.monster.Spirigatito;
+
 import java.util.ArrayList;
 import poke.view.PokeFrame;
 

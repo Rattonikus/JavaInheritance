@@ -30,7 +30,7 @@ public class PokePanel extends JPanel
 	
 	
 	private JLabel imageLabel;
-	private ImageIcon pokemonImage;
+	private ImageIcon icon;
 	private JComboBox<String> pokedexSelector;
 
 	
@@ -57,7 +57,7 @@ public class PokePanel extends JPanel
 		this.typeArea = new JTextArea(20, 20);
 		this.typesPane = new JScrollPane();
 		this.imageLabel = new JLabel("Image");
-		this.pokemonImage = new ImageIcon();
+		this.icon = new ImageIcon();
 		this.pokedexSelector = new JComboBox<String>();
 
 		setupPanel();
@@ -93,6 +93,8 @@ public class PokePanel extends JPanel
 		this.add(imageLabel);
 		this.add(pokedexSelector);
 		
+		updateDisplay("");
+		
 		
 	}
 	private void setupListeners()
@@ -101,7 +103,38 @@ public class PokePanel extends JPanel
 	}
 	private void setupLayout()
 	{
+		layout.putConstraint(SpringLayout.WEST, fieldPanel, -350, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.EAST, fieldPanel, -25, SpringLayout.EAST, this);
+		layout.putConstraint(SpringLayout.NORTH, fieldPanel, 25, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.SOUTH, fieldPanel, -25, SpringLayout.SOUTH, this);
+		
+		layout.putConstraint(SpringLayout.NORTH, imageLabel, 150, SpringLayout.NORTH, this);
+		layout.putConstraint(SpringLayout.WEST, imageLabel, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, imageLabel, -100, SpringLayout.WEST, fieldPanel);
+		
+		layout.putConstraint(SpringLayout.WEST, pokedexSelector, 150, SpringLayout.WEST, this);
+		layout.putConstraint(SpringLayout.EAST, pokedexSelector, -150, SpringLayout.WEST, fieldPanel);
+		layout.putConstraint(SpringLayout.SOUTH, pokedexSelector, -200, SpringLayout.SOUTH, this);
+	}
 	
+	private void updateDisplay(String param)
+	{
+		String path = "/poke/view/images/";
+		String name = param;
+		String defaultName = "Rattata";
+		String extension = ".png";
+		
+		try
+		{
+			icon = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch(NullPointerException missingFile)
+		{
+			icon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		
+		imageLabel.setIcon(icon);
+		repaint();
 	}
 
 }

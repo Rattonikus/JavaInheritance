@@ -96,6 +96,8 @@ public class PokePanel extends JPanel
 		updateDisplay("");
 		
 		
+		imageLabel.setVerticalTextPosition(JLabel.BOTTOM);
+		imageLabel.setHorizontalTextPosition(JLabel.CENTER);
 	}
 	private void setupListeners()
 	{

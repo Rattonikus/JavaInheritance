@@ -70,5 +70,6 @@ public class Spirigatito extends Pokemon implements Grass
 		this.setCanEvolve(canEvolve);
 		this.setHealth(health);
 		this.setName(Name);
+		
 	}
 }

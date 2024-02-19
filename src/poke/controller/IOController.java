@@ -15,6 +15,8 @@ import poke.view.PokeFrame;
 
 public class IOController 
 {
+	
+	
 	public static ArrayList<Pokemon> loadData(String dataFile, Controller app, PokeFrame frame)
 	{
 		ArrayList<Pokemon> savedPokemonList = null;
@@ -26,10 +28,12 @@ public class IOController
 			loadedPokemon = (ArrayList<Pokemon>) input.readObject();
 			savedPokemonList = loadedPokemon;
 		}
+		
 		catch(IOException readError)
 		{
 			JOptionPane.showMessageDialog(app.getWindow(), readError.getMessage(), "Could not read file", JOptionPane.ERROR_MESSAGE);
 		}
+		
 		catch(ClassNotFoundException classError)
 		{
 			JOptionPane.showMessageDialog(app.getWindow(), classError.getMessage(), "Class error", JOptionPane.ERROR_MESSAGE);
@@ -38,6 +42,7 @@ public class IOController
 		return savedPokemonList;
 	}
 	
+	
 	public static void saveData(String dataFile, ArrayList<Pokemon> pokemonList, Controller app)
 	{	
 		try(FileOutputStream saveStream = new FileOutputStream(dataFile);
@@ -45,11 +50,12 @@ public class IOController
 		{
 			output.writeObject(pokemonList);
 		}
+		
 		catch(IOException saveError)
 		{
 			JOptionPane.showMessageDialog(app.getWindow(), saveError.getMessage(), "Couldnt save", JOptionPane.ERROR_MESSAGE);
 		}
-			}
+	}
 	
-
+	
 }

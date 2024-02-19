@@ -22,25 +22,20 @@ public class PokePanel extends JPanel
 	private JTextField nameField;
 	private JTextField numberField;
 	private JTextField healthField;
+	
 	private JLabel healthLabel;
 	private JLabel nameLabel;
 	private JLabel numberLabel;
-
+	private JLabel imageLabel;
 
 	private JCheckBox evolveBox;
 	private JTextArea typeArea;
 	private JScrollPane typesPane;
-	
-	
-	private JLabel imageLabel;
 	private ImageIcon icon;
 	private JComboBox<String> pokedexSelector;
+	
 	private JButton updateButton; 
 	private JButton saveButton;
-	
- 
-
-	
 	
 	public PokePanel(Controller app)
 	{

@@ -7,7 +7,6 @@ import poke.model.monster.Raticate;
 import poke.model.monster.Rattata;
 import poke.model.monster.Spheal;
 import poke.model.monster.Sprigatito;
-import poke.model.types.*;
 import javax.swing.JOptionPane;
 
 import java.util.ArrayList;
@@ -15,25 +14,23 @@ import poke.view.PokeFrame;
 
 public class Controller 
 {
-	
+	//Data Members
 	String dataFile;
-	//Declare an arrayLIST, not an array, not like int[]
 	ArrayList<Pokemon> pokedex;
-	private PokeFrame window; 
+	private PokeFrame window;
+	
 	
 	public Controller()
 	{
-		//initialize that ho 
+		//initialize members 
 		this.pokedex = new ArrayList<Pokemon>();
 		createPokedex();
 		this.dataFile = "save.pokemon";
-		
 	}
 	
 	
 	public void start()
 	{
-		createPokedex();
 		this.window = new PokeFrame(this);
 		
 		ArrayList<Pokemon> saved = IOController.loadData(dataFile, this, window);
@@ -41,8 +38,7 @@ public class Controller
 		if (saved != null && saved.size() > 0)
 		{
 			this.pokedex = saved;
-		}
-			
+		}	
 	}
 	
 	
@@ -58,8 +54,8 @@ public class Controller
 		pokedex.add(new Noibat("Screamer"));
 		pokedex.add(new Sprigatito("grass cat"));
 		pokedex.add(new Spheal("orb"));
-		
 	}
+	
 	
 	public void updateCurrentPokemon(String name, int index, int health, boolean canEvolve)
 	{
@@ -68,6 +64,7 @@ public class Controller
 		currentPokemon.setHealth(health);
 		currentPokemon.setCanEvolve(canEvolve);		
 	}
+	
 	
 	public boolean validateNumber(String val)
 	{
@@ -83,14 +80,15 @@ public class Controller
 			JOptionPane.showMessageDialog(window, "Use a valid number");
 		}
 		
-		return isValid; 
-		
+		return isValid;
 	}
+	
 	
 	public PokeFrame getWindow()
 	{
 		return window;
 	}
+	
 	
 	public void save()
 	{

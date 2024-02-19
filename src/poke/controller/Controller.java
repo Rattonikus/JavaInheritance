@@ -26,15 +26,22 @@ public class Controller
 		//initialize that ho 
 		this.pokedex = new ArrayList<Pokemon>();
 		createPokedex();
-		this.dataFile = "";
+		this.dataFile = "src/poke/model/Pokemon.java";
 		
 	}
 	
 	
 	public void start()
 	{
-		createPokedex();
-		this.window = new PokeFrame(this);
+		//createPokedex();
+		//this.window = new PokeFrame(this);
+		
+		ArrayList<Pokemon> saved = IOController.loadData(dataFile, this, window);
+		
+		if (saved != null && saved.size() > 0)
+		{
+			this.pokedex = saved;
+		}
 			
 	}
 	
@@ -79,6 +86,16 @@ public class Controller
 		return isValid; 
 		
 	}
+	
+	public PokeFrame getWindow()
+	{
+		return window;
+	}
+	
+	public void save()
+	{
+		IOController.saveData(dataFile, pokedex, this);
+		}
 	
 	
 }

@@ -9,9 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
-import poke.model.monster.*;
+import poke.model.Pokemon;
 import poke.view.PokeFrame;
-import poke.model.*;
+
 
 public class IOController 
 {
@@ -20,7 +20,7 @@ public class IOController
 		ArrayList<Pokemon> savedPokemonList = null;
 		
 		try(FileInputStream loadStream = new FileInputStream(dataFile);
-				ObjectInputStream input = new ObjectInputStream(loadStream))
+			ObjectInputStream input = new ObjectInputStream(loadStream))
 		{
 			ArrayList<Pokemon> loadedPokemon = new ArrayList<Pokemon>();
 			loadedPokemon = (ArrayList<Pokemon>) input.readObject();

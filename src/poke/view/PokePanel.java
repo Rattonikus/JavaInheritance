@@ -114,7 +114,7 @@ public class PokePanel extends JPanel
 	private void setupListeners()
 	{
 		updateButton.addActionListener(click -> collectInput());
-		saveButton.addActionListener(click -> collectInput());
+		saveButton.addActionListener(click -> app.save());
 	}
 	private void setupLayout()
 	{

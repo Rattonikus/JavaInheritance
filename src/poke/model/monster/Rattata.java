@@ -13,7 +13,7 @@ public class Rattata extends Pokemon implements Normal
 	public Rattata()
 	{
 		super(19, "Rattata");
-		//setup(true, 30, "Rattata");
+		setup(true, 30, "Rattata");
 	}
 	
 	//Overloaded constructor; Lets us name individual pokemon

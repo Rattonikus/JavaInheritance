@@ -32,8 +32,9 @@ public class Controller
 	public void start()
 	{
 		
-		System.out.println("a" + buildPokedexText());
+		//System.out.println("a" + buildPokedexText());
 		
+		//this.window = new PokeFrame(this);
 		this.window = new PokeFrame(this);
 		
 		ArrayList<Pokemon> saved = IOController.loadData(dataFile, this, window);
@@ -43,6 +44,10 @@ public class Controller
 			this.pokedex = saved;
 			
 		}	
+		
+		
+		System.out.println("" + buildPokedexText());
+		
 	}
 	
 	
@@ -103,7 +108,7 @@ public class Controller
 	{
 		String[] pokedexText = new String[pokedex.size()];
 		
-		for(int i = 0; i > pokedex.size(); i++)
+		for(int i = 0; i < pokedex.size(); i++)
 		{
 			pokedexText[i] = i + "; " + pokedex.get(i).getClass().getSimpleName();
 		}
@@ -134,5 +139,6 @@ public class Controller
 		return newPokemon;
 	}
 	
+
 	
 }

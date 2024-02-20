@@ -11,7 +11,7 @@ public class Sprigatito extends Pokemon implements Grass
 	public Sprigatito()
 	{
 		super(906, "Spirigatito");
-		//setup(true, 40, "Sprigatito");
+		setup(true, 40, "Sprigatito");
 	}
 	
 	public Sprigatito(String name)

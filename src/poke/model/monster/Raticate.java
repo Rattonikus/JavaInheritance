@@ -13,7 +13,7 @@ public class Raticate extends Rattata implements Normal
 	public Raticate()
 	{
 		super("Raticate", 20);
-		//setup(false, 50, "Raticate");
+		setup(false, 50, "Raticate");
 	}
 	
 	public Raticate(String name)

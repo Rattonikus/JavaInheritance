@@ -11,7 +11,7 @@ public class Spheal extends Pokemon implements Water
 	public Spheal()
 	{
 		super(363, "Spheal");
-		//setup(true, 70, "Spheal");
+		setup(true, 70, "Spheal");
 	}
 	
 	public Spheal(String name)

@@ -13,7 +13,7 @@ public class Noibat extends Pokemon implements Flying
 	public Noibat()
 	{
 		super(714, "Noibat");
-		//setup(true, 40, "Noibat");
+		setup(true, 40, "Noibat");
 	}
 	
 	public Noibat(String name)

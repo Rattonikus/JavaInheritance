@@ -111,5 +111,28 @@ public class Controller
 		return pokedexText;
 	}
 	
+	public String[] getPokemonData(int index)
+	{
+		String[] newPokemon = new String[5];
+		
+		Pokemon currentPokemon = pokedex.get(index);
+		
+		newPokemon[0] = currentPokemon.getName();
+		newPokemon[1] = "" + currentPokemon.isCanEvolve();
+		newPokemon[2] = "" + currentPokemon.getHealth();
+		newPokemon[3] = "" + currentPokemon.getPokedex();
+		
+		String types = "Pokemon Types\n\n";
+		
+		for (String type: currentPokemon.getTypes())
+		{
+			types = type + "\n";
+		}
+		
+		newPokemon[4] = types; 
+		
+		return newPokemon;
+	}
+	
 	
 }

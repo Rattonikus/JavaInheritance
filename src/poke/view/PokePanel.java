@@ -11,6 +11,7 @@ import poke.controller.*;
 import java.util.ArrayList;
 
 
+
 public class PokePanel extends JPanel
 {
 	
@@ -63,7 +64,8 @@ public class PokePanel extends JPanel
 		this.pokedexSelector = new JComboBox<String>();
 		this.updateButton = new JButton(); 
 		this.saveButton = new JButton("Save");
-
+		
+		setupDropDown();
 		setupPanel();
 		setupListeners();
 		setupLayout();
@@ -162,7 +164,11 @@ public class PokePanel extends JPanel
 		}
 	}
 	
-
+	private void setupDropDown()
+	{
+		DefaultComboBoxModel<String> drop = new DefaultComboBoxModel<String>(app.buildPokedexText());
+		pokedexSelector.setModel(drop);
+	}
 	
 
 }
